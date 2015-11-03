@@ -1,0 +1,36 @@
+{
+  "name": "hapi-auth-demo",
+  "version": "0.0.1",
+  "description": "A demo application using bell and hapi-auth-cookie",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jiverson/hapi-auth-demo.git"
+  },
+  "keywords": [
+    "hapi",
+    "bell",
+	"google",
+    "authentication",
+    "hapi-auth-cookie"
+  ],
+  "author": "Josh Iverson <jiverson222@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bell": "^5.4.0",
+    "confidence": "^1.4.2",
+    "handlebars": "^4.0.4",
+    "hapi": "^11.0.2",
+    "hapi-auth-cookie": "^3.1.0",
+    "hoek": "^2.16.3",
+    "inert": "^3.2.0",
+    "joi": "^6.10.0",
+    "vision": "^3.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^1.7.3"
+  }
+}

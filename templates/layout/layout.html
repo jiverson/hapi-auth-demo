@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+    {{#if isLoggedIn}} {{> nav}} {{else}} {{> header}} {{/if}}
+    <section>
+        {{{ content }}}
+    </section>
+    {{> footer}}
+    <script type="text/javascript" src="/js/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/lib/handlebars.runtime.min.js"></script>
+</body>
+</html>

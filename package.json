@@ -23,7 +23,7 @@
     "bell": "^5.4.0",
     "confidence": "^1.4.2",
     "handlebars": "^4.0.4",
-    "hapi": "^11.0.2",
+    "hapi": "11.0.2",
     "hapi-auth-cookie": "^3.1.0",
     "hoek": "^2.16.3",
     "inert": "^3.2.0",

@@ -60,7 +60,6 @@ server.register([
 				}
 			},
 			handler: function(request, reply) {
-				console.log(request);
 				reply.view('index', {
 					auth: JSON.stringify(request.auth),
 					isLoggedIn: request.auth.isAuthenticated

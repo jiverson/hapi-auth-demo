@@ -1,6 +1,6 @@
-var Confidence = require('confidence');
+const Confidence = require('confidence');
 
-var store = new Confidence.Store({
+const store = new Confidence.Store({
 	provider: {
 		$filter: 'env',
 		production: {
@@ -26,17 +26,15 @@ var store = new Confidence.Store({
 				provider: 'google',
 				password: 'hapiauth',
 				clientId: '',
-				clientSecret: process.env.GOOGLE_SECRET || '',
+				clientSecret: process.env.GOOGLE_SECRET,
 				isSecure: false
 			}
 		}
 	}
 });
 
-var criteria = {
+const criteria = {
 	env: process.env.ENVIRONMENT
 };
 
-exports.get = function(key) {
-	return store.get(key, criteria);
-};
+exports.get = key => (store.get(key, criteria));

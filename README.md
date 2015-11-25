@@ -14,6 +14,8 @@ npm install
 node index.js
 ```
 
+Run node in `--use_strict` mode.
+
 ## Usage
 
 **Configuration**

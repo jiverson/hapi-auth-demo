@@ -1,6 +1,5 @@
-'use strict';
-const Hapi = require('hapi');
-const Path = require('path');
+var Hapi = require('hapi');
+var Path = require('path');
 
 const server = new Hapi.Server();
 server.connection({
@@ -15,7 +14,7 @@ server.register([
 	require('inert'),
 	require('bell'),
 	require('hapi-auth-cookie'),
-	require('./modules/auth')], err => {
+	require('./modules/auth')], function(err) {
 	if (err) throw err;
 
 	server.views({

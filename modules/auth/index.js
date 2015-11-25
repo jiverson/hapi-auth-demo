@@ -1,9 +1,9 @@
-var Providers = require('./config').get('/provider');
+const Providers = require('./config').get('/provider');
 
-exports.register = function(server, options, next) {
+exports.register = (server, options, next) => {
 
 	// app cache to store user information once logged in expires in 3 days
-	var cache = server.cache({
+	let cache = server.cache({
 		expiresIn: 3 * 24 * 60 * 60 * 1000
 	});
 	server.app.cache = cache;
@@ -20,9 +20,9 @@ exports.register = function(server, options, next) {
 		cookie: 'sid-hapiauth', // cookie name to use, usually sid-<appname>
 		redirectTo: '/',
 		isSecure: false,
-		validateFunc: function(request, session, callback) {
+		validateFunc: (request, session, callback) => {
 
-			cache.get(session.sid, function(err, cached) {
+			cache.get(session.sid, (err, cached) => {
 				if (err)
 					return callback(err, false);
 
@@ -47,7 +47,7 @@ exports.register = function(server, options, next) {
 		path: '/logout',
 		method: 'GET',
 		config: {
-			handler: function(request, reply) {
+			handler: (request, reply) => {
 				request.auth.session.clear();
 				return reply.redirect('/');
 			}

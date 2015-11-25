@@ -1,9 +1,9 @@
 module.exports = function(request, reply) {
 
-	var account = request.auth.credentials;
-	var sid = account.profile.id;
+	let account = request.auth.credentials;
+	let sid = account.profile.id;
 
-	this.cache.set(sid, { account: account }, 0, function(err) {
+	this.cache.set(sid, { account: account }, 0, err => {
 		if (err)
 			return reply(err);
 

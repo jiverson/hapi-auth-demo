@@ -14,7 +14,7 @@ server.register([
 	require('inert'),
 	require('bell'),
 	require('hapi-auth-cookie'),
-	require('./modules/auth')], function(err) {
+	require('./modules/auth')], err => {
 	if (err) throw err;
 
 	server.views({
